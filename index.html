@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+  Nombre completo: index.html
+  Ruta o ubicación: /index.html
+  Funciones principales:
+  - Servir como entrada pública principal en Cloudflare Pages.
+  - Redirigir automáticamente al formulario de estudiantes.
+  - Evitar mostrar paneles de coordinadores, administradores, seguridad o pruebas.
+  - Mantener una opción manual si la redirección automática no funciona.
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Registro de Títulos Académicos</title>
+
+  <meta
+    name="description"
+    content="Formulario público para que estudiantes registren sus propuestas de títulos académicos."
+  />
+
+  <meta name="robots" content="noindex, nofollow" />
+
+  <meta http-equiv="refresh" content="0; url=estudiantes/estudiante.html" />
+
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --primary: #0b1f3a;
+      --line: #d9e2ef;
+      --shadow: 0 18px 45px rgba(11, 31, 58, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .redirect-card {
+      width: min(560px, 100%);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: #e8eef6;
+      color: var(--primary);
+      padding: 7px 12px;
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      line-height: 1.15;
+    }
+
+    p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border-radius: 12px;
+      background: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 12px 18px;
+    }
+
+    .btn:hover {
+      background: #061325;
+    }
+
+    .small {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+  </style>
+
+  <script>
+    (function () {
+      "use strict";
+
+      window.location.replace("estudiantes/estudiante.html");
+    })();
+  </script>
+</head>
+
+<body>
+  <main class="redirect-card">
+    <span class="badge">Titulación académica</span>
+
+    <h1>Registro de propuestas de título</h1>
+
+    <p>
+      Te estamos redirigiendo al formulario público de estudiantes.
+    </p>
+
+    <a class="btn" href="estudiantes/estudiante.html">
+      Abrir formulario
+    </a>
+
+    <p class="small">
+      Si la página no abre automáticamente, presiona el botón.
+    </p>
+  </main>
+</body>
+</html>

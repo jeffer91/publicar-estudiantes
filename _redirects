@@ -1,0 +1,30 @@
+# ============================================================
+# Nombre completo: _redirects
+# Ruta o ubicación: /_redirects
+# Funciones principales:
+# - Redirigir la raíz del sitio al formulario de estudiantes.
+# - Permitir abrir /estudiantes como ruta corta.
+# - Evitar acceso a rutas privadas si por error se suben.
+# - Evitar ciclos infinitos de redirección en Cloudflare Pages.
+# ============================================================
+
+/ /estudiantes/estudiante.html 302
+/index.html /estudiantes/estudiante.html 302
+
+/estudiantes /estudiantes/estudiante.html 302
+/estudiantes/ /estudiantes/estudiante.html 302
+
+/administradores /estudiantes/estudiante.html 302
+/administradores/ /estudiantes/estudiante.html 302
+/administradores/* /estudiantes/estudiante.html 302
+
+/coordinadores /estudiantes/estudiante.html 302
+/coordinadores/ /estudiantes/estudiante.html 302
+/coordinadores/* /estudiantes/estudiante.html 302
+
+/docs /estudiantes/estudiante.html 302
+/docs/ /estudiantes/estudiante.html 302
+/docs/* /estudiantes/estudiante.html 302
+
+/seguridad.html /estudiantes/estudiante.html 302
+/pruebas.html /estudiantes/estudiante.html 302

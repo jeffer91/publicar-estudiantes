@@ -1,0 +1,33 @@
+# ============================================================
+# Nombre completo: _headers
+# Ruta o ubicación: /_headers
+# Funciones principales:
+# - Agregar cabeceras básicas de seguridad para Cloudflare Pages.
+# - Evitar caché agresiva en HTML y archivos JS de la app.
+# - Reducir problemas cuando actualices código y los estudiantes abran una versión vieja.
+# ============================================================
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cache-Control: no-cache
+
+/*.html
+  Cache-Control: no-cache
+
+/estudiantes/*.html
+  Cache-Control: no-cache
+
+/estudiantes/js/*
+  Cache-Control: no-cache
+
+/estudiantes/css/*
+  Cache-Control: no-cache
+
+/shared/css/*
+  Cache-Control: no-cache
+
+/estudiantes/assets/*
+  Cache-Control: public, max-age=86400
